@@ -13,7 +13,6 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [position, setPosition] = useState();
   const [userHasBeenLocated, setUserHasBeenLocated] = useState(false);
-  const [fail, setFail] = useState();
   const [city, setCity] = useState();
   const [currentWeather, setCurrentWeather] = useState({});
   const [forecast, setForecast] = useState();
@@ -97,8 +96,6 @@ function App() {
   useEffect(() => {
     getWeatherForecast();
   }, [userHasBeenLocated]);
-
-  if (fail) return <h2>failed</h2>;
 
   if (loading) return <Loading />;
 

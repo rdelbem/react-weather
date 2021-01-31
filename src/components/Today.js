@@ -16,7 +16,18 @@ function Today(props) {
   const currentHour = Date.now();
 
   const hasTheSunset = () => {
-    return currentHour > sunsetMs ? true : false;
+    if (
+      currentHour > sunsetMs &&
+      parseFloat(dateformat(currentHour, "HH:MM").split(":").join(".")) < 23.59
+    ) {
+      return true;
+    }
+
+    if (currentHour < sunriseMs) {
+      return true;
+    }
+
+    return false;
   };
 
   const howLongUntilDayOrNight = () => {
@@ -95,7 +106,7 @@ function Today(props) {
             <p>{convertTempFromKelvin("celsius", temp)}</p>
           </div>
           <div className="icon">
-            <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} />
+            <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} />
           </div>
         </div>
         <div className="sun-moon-container">

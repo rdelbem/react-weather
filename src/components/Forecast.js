@@ -13,7 +13,7 @@ function Forecast({ dt, temp, weather }) {
         <p> ▲ {convertTempFromKelvin("celsius", max)}</p>
         <img
           className="icon"
-          src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+          src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
           alt=""
         />
         <p> ▼ {convertTempFromKelvin("celsius", min)}</p>

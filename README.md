@@ -5,4 +5,4 @@ It is a geolocation based weather app, which gives three days of weather forecas
 As this app is a PWA it can be downloaded to your device. Hope you like it.
 This is totally opensource, change as you please! Have fun.
 
-DEMO - https://happy-austin-715420.netlify.app/
+DEMO - https://relaxed-montalcini-78a953.netlify.app/
